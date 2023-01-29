@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title> 侧边栏DEMO </title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--此处为了使用图库进行引用-->
+     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="Sidebar">
+    <div class="LogoDetails">
+      <i class='bx bx-book-open'></i>
+      <span class="LogoName">云顶图书馆</span>
+    </div>
+  <ul class="NavLinks">
+
+      <li>
+      
+        <div class="IocnLink">
+          <a href="#">
+            <i class='bx bx-collection' ></i>
+            <span class="LinkName">待添加</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="subMenu">
+          <li><a class="LinkName" href="#">待添加</a></li>
+          <li><a href="#">待添加</a></li>
+          <li><a href="#">待添加</a></li>
+        </ul>
+      </li>
+      
+      <li>
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2' ></i>
+          <span class="LinkName">待添加</span>
+        </a>
+        <ul class="subMenu blank">
+          <li><a class="LinkName" href="#">待添加</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-line-chart' ></i>
+          <span class="LinkName">待添加</span>
+        </a>
+        <ul class="subMenu blank">
+          <li><a class="LinkName" href="#">待添加</a></li>
+        </ul>
+      </li>
+      
+  
+</ul>
+  </div>
+  <div class="HomeSection">
+    <div class="HomeContent">
+      <i class='bx bx-menu' ></i>
+      <span class="text">&nbsp&nbsp&nbsp&nbsp&nbsp首页&nbsp&nbsp&nbsp&nbsp消息</span> 
+      <div class="Searchbox">
+        <input type="search" name="" placeholder="哈哈" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        
+      </div>
+    <div class="NamePhoto">
+        <div class="Center">
+              <span class="text">用户中心</span>
+        </div>
+        <span>&nbsp&nbsp&nbsp&nbsp</span>
+        <i class='bx bxs-ghost' ></i>
+    </div>
+    </div>
+  
+  </div>
+
+  <script>
+
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+
+  let sidebar = document.querySelector(".Sidebar");
+  let sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  </script>
+ 
+</body>
+</html>

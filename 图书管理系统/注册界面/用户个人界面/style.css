@@ -1,0 +1,264 @@
+/* Google Fonts Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Sidebar {
+    position: fixed;
+    /*元素会被移出正常文档流，并不为元素预留空间，而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。打印时，元素会出现在的每页的固定位置。*/
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: #11101d;
+    z-index: 1000;
+    /*保证侧边边栏模块在显示时在页面最上方*/
+    transition: all 0.5s ease;
+}
+
+.Sidebar.close {
+    width: 78px;
+}
+
+.Sidebar .LogoDetails {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Sidebar .LogoDetails i {
+    font-size: 30px;
+    color: #fff;
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.Sidebar .LogoDetails .LogoName {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s ease;
+    transition-delay: 0.1s;
+}
+
+.Sidebar.close .LogoDetails .LogoName {
+    transition-delay: 0s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.Sidebar .NavLinks {
+    height: 100%;
+    padding: 30px 0 150px 0;
+    overflow: auto;
+}
+
+.Sidebar.close .NavLinks {
+    overflow: visible;
+}
+
+.Sidebar .NavLinks::-webkit-scrollbar {
+    display: none;
+}
+
+.Sidebar .NavLinks li {
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+}
+
+.Sidebar .NavLinks li:hover {
+    background: #1d1b31;
+}
+
+.Sidebar .NavLinks li .IocnLink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Sidebar.close .NavLinks li .IocnLink {
+    display: block
+}
+
+.Sidebar .NavLinks li i {
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Sidebar .NavLinks li.showMenu i.arrow {
+    transform: rotate(-180deg);
+}
+
+.Sidebar.close .NavLinks i.arrow {
+    display: none;
+}
+
+.Sidebar .NavLinks li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.Sidebar .NavLinks li a .LinkName {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+.Sidebar.close .NavLinks li a .LinkName {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.Sidebar .NavLinks li .subMenu {
+    padding: 6px 6px 14px 80px;
+    margin-top: -10px;
+    background: #1d1b31;
+    display: none;
+}
+
+.Sidebar .NavLinks li.showMenu .subMenu {
+    display: block;
+}
+
+.Sidebar .NavLinks li .subMenu a {
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 0;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.Sidebar .NavLinks li .subMenu a:hover {
+    opacity: 1;
+}
+
+.Sidebar.close .NavLinks li .subMenu {
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+    transition: 0s;
+}
+
+.Sidebar.close .NavLinks li:hover .subMenu {
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+}
+
+.Sidebar .NavLinks li .subMenu.LinkName {
+    display: none;
+}
+
+.Sidebar.close .NavLinks li .subMenu.LinkName {
+    font-size: 18px;
+    opacity: 1;
+    display: block;
+}
+
+.Sidebar .NavLinks li .subMenu.blank {
+    opacity: 1;
+    pointer-events: auto;
+    padding: 3px 20px 6px 16px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.Sidebar .NavLinks li:hover .subMenu.blank {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.NamePhoto {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    position: absolute;
+    right: 0;
+}
+
+.NamePhoto i {
+    font-size: 50px;
+    line-height: 100px;
+}
+
+.NamePhoto .Center {
+    line-height: 100px;
+}
+
+
+.HomeSection {
+    position: relative;
+    background: #E4E9F7;
+
+    height: 100vh;
+    left: 260px;
+    width: calc(100% - 260px);
+    transition: all 0.5s ease;
+}
+
+.header-1 {
+    position: absolute;
+    left: 50%;
+
+}
+
+.Sidebar.close~.HomeSection {
+    left: 78px;
+    width: calc(100% - 78px);
+}
+
+.HomeSection .HomeContent {
+    position: relative;
+    background-color: grey;
+    background: rgba(0, 0, 0, 0.1);
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+}
+
+.HomeSection .HomeContent .bx-menu,
+.HomeSection .HomeContent .text {
+    color: #11101d;
+    font-size: 35px;
+}
+
+.HomeSection .HomeContent .bx-menu {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.HomeSection .HomeContent .text {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.HomeSection .HomeContent .Searchbox {
+    position: absolute;
+    right: 250px;
+}

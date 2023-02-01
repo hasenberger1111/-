@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title> 侧边栏DEMO </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="person-index.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--此处为了使用图库进行引用-->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -25,18 +25,18 @@
                 <div class="IocnLink">
                     <a href="#">
                         <i class='bx bx-collection'></i>
-                        <span class="LinkName">待添加</span>
+                        <span class="LinkName">我的</span>
                     </a>
                     <i class='bx bxs-chevron-down arrow'></i>
                 </div>
-                <ul class="subMenu">
+                <!-- <ul class="subMenu">
                     <li><a class="LinkName" href="#">待添加</a></li>
                     <li><a href="#">待添加</a></li>
                     <li><a href="#">待添加</a></li>
                 </ul>
-            </li>
+            </li> -->
 
-            <li>
+                <!-- <li>
                 <a href="#">
                     <i class='bx bx-pie-chart-alt-2'></i>
                     <span class="LinkName">待添加</span>
@@ -53,7 +53,7 @@
                 <ul class="subMenu blank">
                     <li><a class="LinkName" href="#">待添加</a></li>
                 </ul>
-            </li>
+            </li> -->
 
 
         </ul>
@@ -75,27 +75,23 @@
                 <i class='bx bxs-ghost'></i>
             </div>
         </div>
+        <div id="PersonMessage">
+            <div id="avatar"></div>
+            <div id="name">张三</div>
+        </div>
 
+        <div id="record">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+
+            </ul>
+        </div>
+        <button id="quit">退出登录</button>
     </div>
-<!-- 
-    <script>
-
-        let arrow = document.querySelectorAll(".arrow");
-        for (var i = 0; i < arrow.length; i++) {
-            arrow[i].addEventListener("click", (e) => {
-                let arrowParent = e.target.parentElement.parentElement;
-                arrowParent.classList.toggle("showMenu");
-            });
-        }
-
-        let sidebar = document.querySelector(".Sidebar");
-        let sidebarBtn = document.querySelector(".bx-menu");
-        console.log(sidebarBtn);
-        sidebarBtn.addEventListener("click", () => {
-            sidebar.classList.toggle("close");
-        });
-    </script> -->
-    <script src="./script.js"></script>
+    <script src="./person-index.js"></script>
 </body>
 
 </html>

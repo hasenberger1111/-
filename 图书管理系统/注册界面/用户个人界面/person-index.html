@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title> 侧边栏DEMO </title>
-    <link rel="stylesheet" href="person-index.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--此处为了使用图库进行引用-->
+    <link rel="stylesheet" href="person-style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--此处为了使用图库进行引用 -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_3875222_h0taxuvp66.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
@@ -24,10 +25,11 @@
 
                 <div class="IocnLink">
                     <a href="#">
-                        <i class='bx bx-collection'></i>
+                        <i class="iconfont icon-wode"></i>
+
                         <span class="LinkName">我的</span>
                     </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
+                    <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                 </div>
                 <!-- <ul class="subMenu">
                     <li><a class="LinkName" href="#">待添加</a></li>
@@ -76,22 +78,33 @@
             </div>
         </div>
         <div id="PersonMessage">
-            <div id="avatar"></div>
+            <img src="https://typora--image1.oss-cn-beijing.aliyuncs.com/d54b282a11f4b989840ff36033a4104ef440429c_raw.jpg"
+                alt="" id="avatar">
             <div id="name">张三</div>
+            <button id="quit">退出登录</button>
+
         </div>
 
-        <div id="record">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
 
-            </ul>
-        </div>
-        <button id="quit">退出登录</button>
+
+        <table class="record" cellspacing="80px" frame="all">
+            <tr>
+                <th class="BookName">书名</th>
+                <th class="BorrowDate">借阅日期</th>
+                <th class="TimeLeft">剩余时间</th>
+                <th class="state">状态</th>
+            </tr>
+            <tr>
+                <td class="BookName">流浪地球</td>
+                <td class="BorrowDate">2022/11/11</td>
+                <td class="TimeLeft">60days</td>
+                <td class="state">待还</td>
+            </tr>
+        </table>
+
+
     </div>
-    <script src="./person-index.js"></script>
+    <script src="./person-script.js"></script>
 </body>
 
 </html>

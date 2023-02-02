@@ -1,6 +1,46 @@
 /* Google Fonts Import Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* @font-face {
+    font-family: "iconfont";
+    /* Project id 3834269 
+    src: url('//at.alicdn.com/t/c/font_3834269_sxdhjr4jqpg.woff2?t=1671589629775') format('woff2'),
+        url('//at.alicdn.com/t/c/font_3834269_sxdhjr4jqpg.woff?t=1671589629775') format('woff'),
+        url('//at.alicdn.com/t/c/font_3834269_sxdhjr4jqpg.ttf?t=1671589629775') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sousuo:before {
+    content: "\e600";
+}
+
+.icon-4_round:before {
+    content: "\e63f";
+}
+
+.icon-1_round:before {
+    content: "\e63e";
+}
+
+.icon-3_round:before {
+    content: "\e640";
+}
+
+.icon-2_round:before {
+    content: "\e641";
+}
+
+.icon-hengdengyu:before {
+    content: "\e60e";
+} */
+
 * {
     margin: 0;
     padding: 0;
@@ -265,5 +305,47 @@
 
 #PersonMessage {
     width: 1000px;
-    height: 1000px;
+
+    display: flex;
+}
+
+#avatar {
+    height: 200px;
+    width: 200px;
+    margin: 100px;
+    border-radius: 50%;
+
+}
+
+#name {
+    margin-top: 150px;
+    font-size: 50px;
+}
+
+#record,
+#record li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.record {
+
+    margin: 20px;
+    background-color: aqua;
+    border: #11101d solid;
+    margin: auto;
+
+}
+
+#quit {
+    width: 200px;
+    height: 100px;
+    margin-left: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 15%;
+    background-color: #11101d;
+    color: #fff;
 }

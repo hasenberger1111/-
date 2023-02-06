@@ -331,17 +331,17 @@
 }
 
 .record {
-
+text-align: center;
     margin: 20px;
     background-color: aqua;
     border: #11101d solid;
     margin: auto;
-
+    width: 800px;
 }
 
 #quit {
-    width: 200px;
-    height: 100px;
+    width: 100px;
+    height: 50px;
     margin-left: 200px;
     margin-top: auto;
     margin-bottom: auto;

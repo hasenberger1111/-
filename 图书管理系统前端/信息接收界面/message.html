@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> 侧边栏DEMO </title>
+    <link rel="stylesheet" href="message.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--此处为了使用图库进行引用 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_3875222_h0taxuvp66.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="Sidebar">
+        <div class="LogoDetails">
+            <i class='bx bx-book-open'></i>
+            <span class="LogoName">云顶图书馆</span>
+        </div>
+        <ul class="NavLinks">
+            <li>
+                <div class="IocnLink">
+                    <button class="NavLinks1">
+                        <i class="iconfont icon-wode"></i>
+                        <span class="LinkName">已读</span>
+                    </button>
+                </div>
+            </li>
+            <li>
+
+                <button class="NavLinks2">
+                    <i class='bx bx-pie-chart-alt-2'></i>
+                    <span class="LinkName">未读</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="HomeSection">
+        <div class="HomeContent">
+            <i class='bx bx-menu'></i>
+            <span class="text">&nbsp&nbsp&nbsp&nbsp&nbsp首页&nbsp&nbsp&nbsp&nbsp消息</span>
+            <div class="Searchbox">
+                <input type="search" name="" placeholder="哈哈" id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+
+            </div>
+            <div class="NamePhoto">
+                <div class="Center">
+                    <span class="text">用户中心</span>
+                </div>
+                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                <i class='bx bxs-ghost'></i>
+            </div>
+        </div>
+        <div id="content1" class="content">已读信息</div>
+        <div id="content2" class="content hide">未读信息</div>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="message.js"></script>
+</body>
+
+</html>

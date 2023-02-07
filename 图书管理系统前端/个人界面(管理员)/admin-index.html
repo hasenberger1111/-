@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> 侧边栏DEMO </title>
+    <link rel="stylesheet" href="./admin-style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--此处为了使用图库进行引用 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_3875222_h0taxuvp66.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="Sidebar">
+        <div class="LogoDetails">
+            <i class='bx bx-book-open'></i>
+            <span class="LogoName">云顶图书馆</span>
+        </div>
+        <ul class="NavLinks">
+            <li>
+                <div class="IocnLink">
+                    <a href="#">
+                        <i class="iconfont icon-wode"></i>
+
+                        <span class="LinkName">我的</span>
+                    </a>
+
+                </div>
+
+
+
+        </ul>
+    </div>
+    <div class="HomeSection">
+        <div class="HomeContent">
+            <i class='bx bx-menu'></i>
+            <span class="text">首页&nbsp;&nbsp;&nbsp;<a
+                    href="http://127.0.0.1:5500/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%89%8D%E7%AB%AF/%E4%BF%A1%E6%81%AF%E6%8E%A5%E6%94%B6%E7%95%8C%E9%9D%A2/message.html">消息</a></span>
+            <div class="Searchbox">
+                <input type="search" name="" placeholder="哈哈" id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+
+            </div>
+            <div class="NamePhoto">
+                <div class="Center">
+                    <span class="text">用户中心</span>
+                </div>
+                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                <i class='bx bxs-ghost'></i>
+            </div>
+        </div>
+        <div id="PersonMessage">
+            <img src="https://typora--image1.oss-cn-beijing.aliyuncs.com/d54b282a11f4b989840ff36033a4104ef440429c_raw.jpg"
+                alt="" id="avatar">
+            <div id="name">张三</div>
+            
+
+        </div>
+
+
+        <div style="text-align: center;margin-bottom:20px ; font-size: 20px;font-weight: 600;">借阅记录</div>
+        <table class="record" cellspacing="8px" rules="all">
+            <tr>
+
+                <th class="UserName">用户名</th>
+                <th class="BookName">书名</th>
+                <th class="quantity">数量</th>
+                <th class="BorrowDate">借阅日期</th>
+                <th class="state">状态</th>
+            </tr>
+            <tr>
+
+                <td class="UserName">张三</td>
+                <td class="BookName">流浪地球</td>
+                <td class="quantity">3</td>
+                <td class="BorrowDate">2011/12/23</td>
+                <td class="state">已归还(2022/12/1)</td>
+
+
+
+            </tr>
+            <tr>
+
+                <td class="UserName">张三</td>
+                <td class="BookName">流浪地球</td>
+                <td class="quantity">3</td>
+                <td class="BorrowDate">2011/12/23</td>
+                <td class="state">已归还(2022/12/1)</td>
+
+
+            </tr>
+            <tr>
+                
+                <td class="UserName">张三</td>
+                <td class="BookName">流浪地球</td>
+                <td class="quantity">3</td>
+                <td class="BorrowDate">2011/12/23</td>
+                <td class="state">已归还(2022/12/1)</td>
+
+
+            </tr>
+            <tr>
+
+                <td class="UserName">张三</td>
+                <td class="BookName">流浪地球</td>
+                <td class="quantity">3</td>
+                <td class="BorrowDate">2011/12/23</td>
+                <td class="state">已归还(2022/12/1)</td>
+
+
+            </tr>
+            <tr>
+
+                <td class="UserName">张三</td>
+                <td class="BookName">流浪地球</td>
+                <td class="quantity">3</td>
+                <td class="BorrowDate">2011/12/23</td>
+                <td class="state">已归还(2022/12/1)</td>
+
+
+            </tr>
+            <tr>
+
+                <td class="UserName">张三</td>
+                <td class="BookName">流浪地球</td>
+                <td class="quantity">3</td>
+                <td class="BorrowDate">2011/12/23</td>
+                <td class="state">已归还(2022/12/1)</td>
+
+
+            </tr>
+
+        </table>
+        <div class="TableFooter"><button id="quit">退出登录</button></div>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="./admin-script.js"></script>
+</body>
+
+</html>

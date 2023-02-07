@@ -21,6 +21,3 @@ $('.NavLinks2').click(function () {
     $('#content1').addClass('hide');
     $('#content2').removeClass('hide');
 })
-// $('button').click(function(){
-//     $('div').toggleClass('hide');
-// })

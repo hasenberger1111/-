@@ -105,14 +105,10 @@
     display: none;
 }
 
-.Sidebar .NavLinks li button {
+.Sidebar .NavLinks li a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    border: none;
-    background-color: transparent;
-    color: #fff;
-    width: 100%;
 }
 
 .Sidebar .NavLinks li a .LinkName {
@@ -215,8 +211,8 @@
 .HomeSection {
     position: relative;
     background: #E4E9F7;
-
-    height: 100vh;
+    height: 100%;
+    height: max-content;
     left: 260px;
     width: calc(100% - 260px);
     transition: all 0.5s ease;
@@ -266,28 +262,61 @@
 
 #PersonMessage {
     width: 1000px;
-
+    justify-content: center;
     display: flex;
 }
 
-#content1 {
-    background-color: paleturquoise;
+#avatar {
+    height: 200px;
+    width: 200px;
+    margin: 100px;
+    border-radius: 50%;
+
 }
 
-#content2 {
-    background-color: yellowgreen;
+#name {
+    margin-top: 150px;
+    font-size: 50px;
+}
 
+#record,
+#record li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.record {
+    text-align: center;
+    margin: 20px;
+    background-color: #f7f7f7;
+
+    margin: auto;
+    width: 1000px;
 }
 
 
-.content {
-width: 100%;
-height: 100%;
-    flex-shrink: 0;
+
+
+.HomeContent a {
+    text-decoration: none;
+    color: #11101d;
 }
 
-.hide {
-    display: none;
+.TableFooter {
+    height: 200px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#quit {
+
     width: 100px;
-    height: 100px;
+    height: 50px;
+    margin-top: 50px;
+    border-radius: 15%;
+    background-color: #11101d;
+    color: #fff;
 }

@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.CenterBackground {
+    position: fixed;
+    left: calc(50%);
+    top: calc(50% + 60px);
+    transform: translate(-50%, -50%);
+    height: calc(100%);
+    margin: 0 auto;
+    width: 1200px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+
+.Sidebar {
+    margin: 0 auto;
+    /*元素会被移出正常文档流，并不为元素预留空间，而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。打印时，元素会出现在的每页的固定位置。*/
+    height: 100%;
+    width: 260px;
+    background: #11101d;
+    z-index: 1000;
+    /*保证侧边边栏模块在显示时在页面最上方*/
+    transition: all 0.5s ease;
+    text-align: center;
+}
+
+.Sidebar.close {
+    width: 78px;
+}
+
+.Sidebar .LogoDetails {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Sidebar .LogoDetails i {
+    font-size: 30px;
+    color: #fff;
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.Sidebar .LogoDetails .LogoName {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s ease;
+    transition-delay: 0.1s;
+}
+
+.Sidebar.close .LogoDetails .LogoName {
+    transition-delay: 0s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.Sidebar .NavLinks {
+    height: 100%;
+    padding: 30px 0 150px 0;
+    overflow: auto;
+}
+
+.Sidebar.close .NavLinks {
+    overflow: visible;
+}
+
+.Sidebar .NavLinks::-webkit-scrollbar {
+    display: none;
+}
+
+.Sidebar .NavLinks li {
+
+    list-style: none;
+    transition: all 0.4s ease;
+}
+
+.Sidebar .NavLinks li:hover {
+    background: #1d1b31;
+}
+
+/* .Sidebar .NavLinks li .IocnLink {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+} */
+
+.Sidebar.close .NavLinks li .IocnLink {
+    display: block
+}
+
+.Sidebar .NavLinks li i {
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Sidebar .NavLinks li.showMenu i.arrow {
+    transform: rotate(-180deg);
+}
+
+.Sidebar.close .NavLinks i.arrow {
+    display: none;
+}
+
+.Sidebar .NavLinks li button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    width: 100%;
+}
+
+.Sidebar .NavLinks li a .LinkName {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+.Sidebar.close .NavLinks li a .LinkName {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.Sidebar .NavLinks li .subMenu {
+    padding: 6px 6px 14px 80px;
+    background: #1d1b31;
+    display: none;
+}
+
+.Sidebar .NavLinks li.showMenu .subMenu {
+    display: block;
+}
+
+.Sidebar .NavLinks li .subMenu a {
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 0;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.Sidebar .NavLinks li .subMenu a:hover {
+    opacity: 1;
+}
+
+.Sidebar.close .NavLinks li .subMenu {
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+    transition: 0s;
+}
+
+.Sidebar.close .NavLinks li:hover .subMenu {
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+}
+
+.Sidebar .NavLinks li .subMenu.LinkName {
+    display: none;
+}
+
+.Sidebar.close .NavLinks li .subMenu.LinkName {
+    font-size: 18px;
+    opacity: 1;
+    display: block;
+}
+
+.Sidebar .NavLinks li .subMenu.blank {
+    opacity: 1;
+    pointer-events: auto;
+    padding: 3px 20px 6px 16px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.Sidebar .NavLinks li:hover .subMenu.blank {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.NamePhoto {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+
+
+}
+
+.NamePhoto i {
+    font-size: 50px;
+    line-height: 100px;
+}
+
+.NamePhoto .Center {
+    line-height: 100px;
+}
+
+
+.HomeSection {
+    margin: 0 auto;
+    overflow: auto;
+    width: 940px;
+
+
+
+    transition: all 0.5s ease;
+}
+
+
+
+.Sidebar.close~.HomeSection {
+    left: 78px;
+    width: calc(100% - 78px);
+}
+
+.HomeContent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: grey;
+    background: rgba(0, 0, 0, 0.1);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+
+}
+
+.HomeContent .bx-menu,
+.HomeContent .text {
+    color: #11101d;
+    font-size: 35px;
+}
+
+.HomeContent .bx-menu {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.HomeContent .text {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.HomeContent .Searchbox {
+
+    right: 250px;
+}
+
+
+
+
+.Sidebar .NavLinks a {
+    text-decoration: none;
+}
+
+.NamePhoto a {
+    text-decoration: none;
+}
+
+
+
+#PersonMessage {
+    width: 1000px;
+    justify-content: center;
+    display: flex;
+}
+
+#avatar {
+    height: 200px;
+    width: 200px;
+    margin: 100px;
+    border-radius: 50%;
+
+}
+
+#name {
+    margin-top: 150px;
+    font-size: 50px;
+}
+
+#record,
+#record li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.record {
+    text-align: center;
+    margin: 20px;
+    background-color: #f7f7f7;
+
+    margin: auto;
+    width: 1000px;
+}
+
+
+
+
+.HomeContent a {
+    text-decoration: none;
+    color: #11101d;
+}
+
+.TableFooter {
+    height: 200px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#quit {
+
+    width: 100px;
+    height: 50px;
+    margin-top: 50px;
+    border-radius: 15%;
+    background-color: #11101d;
+    color: #fff;
+}

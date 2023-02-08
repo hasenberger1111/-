@@ -12,15 +12,4 @@ console.log(sidebarBtn);
 sidebarBtn.addEventListener("click", () => {
     sidebar.classList.toggle("close");
 });
-$('.NavLinks1').click(function () {
-    $('#content1').removeClass('hide');
-    $('#content2').addClass('hide');
-
-})
-$('.NavLinks2').click(function () {
-    $('#content1').addClass('hide');
-    $('#content2').removeClass('hide');
-})
-// $('button').click(function(){
-//     $('div').toggleClass('hide');
-// })
+axios.defaults.baseURL = 'http://localhost:8080/yunchenbooksmanagementsystem_war'

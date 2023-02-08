@@ -12,3 +12,4 @@ console.log(sidebarBtn);
 sidebarBtn.addEventListener("click", () => {
     sidebar.classList.toggle("close");
 });
+axios.defaults.baseURL = 'http://localhost:8080/yunchenbooksmanagementsystem_war'

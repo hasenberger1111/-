@@ -5,17 +5,31 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.Sidebar {
+.CenterBackground {
     position: fixed;
+    left: calc(50%);
+    top: calc(50% + 60px);
+    transform: translate(-50%, -50%);
+    height: calc(100%);
+    margin: 0 auto;
+    width: 1200px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+
+.Sidebar {
+    margin: 0 auto;
     /*元素会被移出正常文档流，并不为元素预留空间，而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。打印时，元素会出现在的每页的固定位置。*/
-    top: 0;
-    left: 0;
     height: 100%;
     width: 260px;
     background: #11101d;
     z-index: 1000;
     /*保证侧边边栏模块在显示时在页面最上方*/
     transition: all 0.5s ease;
+    text-align: center;
 }
 
 .Sidebar.close {
@@ -67,7 +81,7 @@
 }
 
 .Sidebar .NavLinks li {
-    position: relative;
+
     list-style: none;
     transition: all 0.4s ease;
 }
@@ -76,11 +90,12 @@
     background: #1d1b31;
 }
 
-.Sidebar .NavLinks li .IocnLink {
+/* .Sidebar .NavLinks li .IocnLink {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-}
+    
+} */
 
 .Sidebar.close .NavLinks li .IocnLink {
     display: block
@@ -105,10 +120,14 @@
     display: none;
 }
 
-.Sidebar .NavLinks li a {
+.Sidebar .NavLinks li button {
     display: flex;
     align-items: center;
     text-decoration: none;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    width: 100%;
 }
 
 .Sidebar .NavLinks li a .LinkName {
@@ -125,7 +144,6 @@
 
 .Sidebar .NavLinks li .subMenu {
     padding: 6px 6px 14px 80px;
-    margin-top: -10px;
     background: #1d1b31;
     display: none;
 }
@@ -148,10 +166,6 @@
 }
 
 .Sidebar.close .NavLinks li .subMenu {
-    position: absolute;
-    left: 100%;
-    top: -10px;
-    margin-top: 0;
     padding: 10px 20px;
     border-radius: 0 6px 6px 0;
     opacity: 0;
@@ -194,8 +208,8 @@
     display: flex;
     justify-content: space-between;
     width: 200px;
-    position: absolute;
-    right: 0;
+
+
 }
 
 .NamePhoto i {
@@ -209,56 +223,74 @@
 
 
 .HomeSection {
-    position: relative;
-    background: #E4E9F7;
-    height: 100%;
-    height: max-content;
-    left: 260px;
-    width: calc(100% - 260px);
+    margin: 0 auto;
+    overflow: auto;
+    width: 940px;
+
+
+
     transition: all 0.5s ease;
 }
 
-.header-1 {
-    position: absolute;
-    left: 50%;
 
-}
 
 .Sidebar.close~.HomeSection {
     left: 78px;
     width: calc(100% - 78px);
 }
 
-.HomeSection .HomeContent {
-    position: relative;
+.HomeContent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
     background-color: grey;
     background: rgba(0, 0, 0, 0.1);
     height: 60px;
     display: flex;
     align-items: center;
+    z-index: 1000;
 
 }
 
-.HomeSection .HomeContent .bx-menu,
-.HomeSection .HomeContent .text {
+.HomeContent .bx-menu,
+.HomeContent .text {
     color: #11101d;
     font-size: 35px;
 }
 
-.HomeSection .HomeContent .bx-menu {
+.HomeContent .bx-menu {
     margin: 0 15px;
     cursor: pointer;
 }
 
-.HomeSection .HomeContent .text {
+.HomeContent .text {
     font-size: 26px;
     font-weight: 600;
 }
 
-.HomeSection .HomeContent .Searchbox {
-    position: absolute;
+.HomeContent .Searchbox {
+
     right: 250px;
 }
+
+
+
+
+.Sidebar .NavLinks a {
+    text-decoration: none;
+}
+
+.NamePhoto a {
+    text-decoration: none;
+}
+
+
 
 #PersonMessage {
     width: 1000px;

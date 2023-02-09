@@ -22,9 +22,15 @@ $('.NavLinks2').click(function () {
     $('#content2').removeClass('hide');
 })
 
-axios.defaults.baseURL = 'http://localhost:8080/yunchenbooksmanagementsystem_war'
+axios.defaults.baseURL = 'http://jp-tyo-ntt-1.natfrp.cloud:53497/yunchenbooksmanagementsystem_war'
 
+window.addEventListener("load", () => {
     axios({
-        url
+        url: '/GetAllBookServlet',
+        method:'GET'
+    }).then((res) => {
+        console.log(res)
     })
-    
+})
+
+

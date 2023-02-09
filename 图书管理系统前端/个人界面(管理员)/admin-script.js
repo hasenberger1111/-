@@ -33,42 +33,7 @@ $('.NavLinks2').click(function () {
 })
 
 
-// let UserMessage = `<div class="AllUser"><div class="UserAvatar">
-//     <img src="https://typora--image1.oss-cn-beijing.aliyuncs.com/d54b282a11f4b989840ff36033a4104ef440429c_raw.jpg"
-//         alt="" class="UserPhoto">
-// </div>
-// <div class="UserMessage">
-//     <h2>张三</h2>
-//     <p>七期&nbsp&nbsp秘书处 <br> ID:3398771472</p>
-// </div>
-// </div>`
-// $('#content1').append(UserMessage);
-// $('#content1').append(UserMessage);
-// $('#content1').append(UserMessage);
-// $('#content1').append(UserMessage);
-// $('#content1').append(UserMessage);
-// $('#content1').append(UserMessage);
-// $('#content1').append(UserMessage);
-// $('#content1').append(UserMessage);
-// $('#content1').append(UserMessage);
-// $('#content1').append(UserMessage);
-// $('#content1').append(UserMessage);
-// $('#content1').append(UserMessage);
-// $('#content1').append(UserMessage);
 
-
-// let record = ` <tr>
-
-// <td class="UserName">张三</td>
-// <td class="BookName">流浪地球</td>
-// <td class="quantity">3</td>
-// <td class="BorrowDate">2011/12/23</td>
-// <td class="state">已归还(2022/12/1)</td>
-
-
-
-// </tr>`
-// $('.record').append(record);
 
 
 axios.defaults.baseURL = 'http://jp-tyo-ntt-1.natfrp.cloud:55102/yunchenbooksmanagementsystem_war'

@@ -224,26 +224,6 @@ body {
 .NamePhoto .Center {
     line-height: 100px;
 }
-
-
-.HomeSection {
-    margin: 0 auto;
-    overflow: auto;
-    width: 940px;
-    height: calc(100%);
-    background-color: #fff;
-    opacity: 0.8;
-
-    transition: all 0.5s ease;
-}
-
-
-
-.Sidebar.close~.HomeSection {
-    left: 78px;
-    width: calc(100% - 78px);
-}
-
 .HomeContent {
     position: fixed;
     top: 0;
@@ -287,16 +267,83 @@ body {
     right: 250px;
 }
 
+.HomeContent a {
+    text-decoration: none;
+    color: #fff;
+}
+.NamePhoto a {
+    text-decoration: none;
+}
 
+.HomeSection {
+    margin: 0 auto;
+    overflow: auto;
+    width: 940px;
+    height: calc(100%);
+    background-color: #fff;
+    opacity: 0.8;
+
+    transition: all 0.5s ease;
+}
+.Sidebar.close~.HomeSection {
+    left: 78px;
+    width: calc(100% - 78px);
+}
+
+/* .HomeContent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    background: rgba(0, 0, 0);
+    opacity: 0.5;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    color: white;
+
+
+}
+
+.HomeContent .bx-menu,
+.HomeContent .text {
+    color: #11101d; 
+    font-size: 35px;
+}
+
+.HomeContent .bx-menu {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.HomeContent .text {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.HomeContent .Searchbox {
+
+    right: 250px;
+}
+
+.HomeContent a {
+    text-decoration: none;
+    color: #fff;
+} */
 
 
 .Sidebar .NavLinks a {
     text-decoration: none;
 }
 
-.NamePhoto a {
-    text-decoration: none;
-}
+
 
 
 
@@ -340,10 +387,7 @@ tbody {
 
 
 
-.HomeContent a {
-    text-decoration: none;
-    color: #fff;
-}
+
 
 
 

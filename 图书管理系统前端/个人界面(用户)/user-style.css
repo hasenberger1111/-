@@ -220,10 +220,8 @@ body {
 .NamePhoto {
     display: flex;
     justify-content: space-between;
-    height: 60px;
-    align-items: center;
-    position: relative;
-    left: 100px;
+
+    width: 200px;
 
 }
 
@@ -253,7 +251,7 @@ body {
     width: calc(100% - 78px);
 }
 
-.HomeContent {
+/* .HomeContent {
     position: fixed;
     top: 0;
     left: 0;
@@ -294,6 +292,75 @@ body {
 .HomeContent .Searchbox {
 
     right: 250px;
+} */
+
+.NamePhoto {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+
+
+}
+
+.NamePhoto i {
+    font-size: 50px;
+    line-height: 100px;
+}
+
+.NamePhoto .Center {
+    line-height: 100px;
+}
+
+.HomeContent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    background: rgba(0, 0, 0);
+    opacity: 0.5;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    color: white;
+
+
+}
+
+.HomeContent .bx-menu,
+.HomeContent .text {
+    /* color: #11101d; */
+    font-size: 35px;
+}
+
+.HomeContent .bx-menu {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.HomeContent .text {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.HomeContent .Searchbox {
+
+    right: 250px;
+}
+
+.HomeContent a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.NamePhoto a {
+    text-decoration: none;
 }
 
 
@@ -363,8 +430,8 @@ body {
 #quit {
 
     font-weight: 600;
-position: relative;
-left: 70px;
+    position: relative;
+    left: 70px;
     font-size: 30px;
     border-radius: 15%;
     background-color: #11101d;

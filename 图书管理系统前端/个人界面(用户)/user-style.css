@@ -5,6 +5,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+
+    background: url("https://kisynergy.oss-cn-beijing.aliyuncs.com/35c5aba813dbae3a4eabe7cc5d9e86f7.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .CenterBackground {
     position: fixed;
     left: calc(50%);
@@ -25,12 +32,14 @@
     /*元素会被移出正常文档流，并不为元素预留空间，而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。打印时，元素会出现在的每页的固定位置。*/
     height: 100%;
     width: 260px;
-    background: #11101d;
+    background: #25607f;
     z-index: 1000;
+    opacity: 0.8;
     /*保证侧边边栏模块在显示时在页面最上方*/
     transition: all 0.5s ease;
     text-align: center;
 }
+
 
 .Sidebar.close {
     width: 78px;
@@ -82,13 +91,17 @@
 
 .Sidebar .NavLinks li {
 
+
     list-style: none;
     transition: all 0.4s ease;
 }
 
 .Sidebar .NavLinks li:hover {
-    background: #1d1b31;
+    background-color: black;
+    opacity: 0.7;
 }
+
+
 
 /* .Sidebar .NavLinks li .IocnLink {
     display: flex;
@@ -207,26 +220,25 @@
 .NamePhoto {
     display: flex;
     justify-content: space-between;
-    width: 200px;
 
+    width: 200px;
 
 }
 
 .NamePhoto i {
     font-size: 50px;
-    line-height: 100px;
+
 }
 
-.NamePhoto .Center {
-    line-height: 100px;
-}
+
 
 
 .HomeSection {
     margin: 0 auto;
     overflow: auto;
     width: 940px;
-
+    background-color: #fff;
+    opacity: 0.8;
 
 
     transition: all 0.5s ease;
@@ -239,7 +251,7 @@
     width: calc(100% - 78px);
 }
 
-.HomeContent {
+/* .HomeContent {
     position: fixed;
     top: 0;
     left: 0;
@@ -249,18 +261,21 @@
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    background-color: grey;
-    background: rgba(0, 0, 0, 0.1);
+
+    background: rgba(0, 0, 0);
+    opacity: 0.5;
     height: 60px;
     display: flex;
     align-items: center;
     z-index: 1000;
-
+    color: white;
+    color: #fff
 }
+
 
 .HomeContent .bx-menu,
 .HomeContent .text {
-    color: #11101d;
+    color: #fff;
     font-size: 35px;
 }
 
@@ -277,6 +292,75 @@
 .HomeContent .Searchbox {
 
     right: 250px;
+} */
+
+.NamePhoto {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+
+
+}
+
+.NamePhoto i {
+    font-size: 50px;
+    line-height: 100px;
+}
+
+.NamePhoto .Center {
+    line-height: 100px;
+}
+
+.HomeContent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    background: rgba(0, 0, 0);
+    opacity: 0.5;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    color: white;
+
+
+}
+
+.HomeContent .bx-menu,
+.HomeContent .text {
+    /* color: #11101d; */
+    font-size: 35px;
+}
+
+.HomeContent .bx-menu {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.HomeContent .text {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.HomeContent .Searchbox {
+
+    right: 250px;
+}
+
+.HomeContent a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.NamePhoto a {
+    text-decoration: none;
 }
 
 
@@ -296,19 +380,21 @@
     width: 1000px;
     justify-content: center;
     display: flex;
+    justify-content: flex-start;
 }
 
 #avatar {
-    height: 200px;
-    width: 200px;
-    margin: 100px;
+    
+    width: 150px;
+    height: 150px;
+    margin: 100px 100px 100px 200px;
     border-radius: 50%;
 
 }
 
 #name {
-    margin-top: 150px;
-    font-size: 50px;
+    margin-top: 120px;
+    font-size: 30px;
 }
 
 #record,
@@ -323,9 +409,9 @@
     text-align: center;
     margin: 20px;
     background-color: #f7f7f7;
-
+    opacity: 0.8;
     margin: auto;
-    width: 1000px;
+    width: 800px;
 }
 
 
@@ -333,7 +419,7 @@
 
 .HomeContent a {
     text-decoration: none;
-    color: #11101d;
+    color: #fff;
 }
 
 .TableFooter {
@@ -345,10 +431,21 @@
 
 #quit {
 
-    width: 100px;
-    height: 50px;
-    margin-top: 50px;
+    font-weight: 600;
+    position: relative;
+    left: 70px;
+    font-size: 30px;
     border-radius: 15%;
     background-color: #11101d;
     color: #fff;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.operation button {
+    border: 1px dashed;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+
 }

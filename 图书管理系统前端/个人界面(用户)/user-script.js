@@ -119,6 +119,25 @@ window.addEventListener('load', () => {
 
             //console.log(element)
         });
+        //console.log(res)
+        $('tr').delegate('.operation', 'click', (i) => {
+            //console.log(i.target.parentNode.parentNode.children[0].innerText)
+            
+            let bookName = i.target.parentNode.parentNode.children[0].innerText
+            console.log(bookName)
+            axios({
+                method: 'POST',
+                url: '/ReturnBookServlet',
+                data: {
+                    "name": "张建亮",
+                    "bookName":bookName
+                    //  "name": "e.target.parentNode.children[0].children[0].children[0].innerText",
+                    // "bookName": "e.target.parentNode.children[0].children[0].children[1].innerText",
+                },
+                headers: { 'content-type': "application/json", }
+            }).then((res) => {
+                console.log(res)
+            })
 
         $('tr').delegate('.operation', 'click', (i) => {
             let bookName = i.target.parentNode.parentNode.children[0].innerText

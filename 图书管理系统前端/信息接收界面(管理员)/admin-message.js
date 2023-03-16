@@ -11,7 +11,7 @@ sidebarBtn.addEventListener("click", () => {
     sidebar.classList.toggle("close");
 });
 
-localStorage.setItem("userName", "张建亮")
+//localStorage.setItem("userName", "张建亮")
 let userName = localStorage.getItem("userName")
 axios.defaults.baseURL = 'http://psskxj.natappfree.cc/yunchen'
 

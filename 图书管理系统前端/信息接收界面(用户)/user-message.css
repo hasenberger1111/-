@@ -333,8 +333,15 @@ body {
 
 }
 
-.content .Message {
-    opacity: 1.0;
+.Message {
+    text-align: left;
+    margin: auto;
+    width: 700px;
+    margin-top: 20px;
+    background-color: #776fd4;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
 }
 
 .hide {
@@ -358,4 +365,30 @@ body {
     background-color: #776fd4;
     padding: 20px;
     border-radius: 4px;
+}
+#content2 .result1{
+    text-align: center;
+    margin: auto;
+    background-color: aquamarine;
+    opacity: 0.8;
+    border-radius: 10%;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+}
+#content2 .result2{
+    text-align: center;
+    margin: auto;
+    background-color: crimson;
+    opacity: 0.8;
+    border-radius: 10%;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+}
+.text p{
+    display: inline;
+}
+.Message .top {
+    width: 500px;
 }

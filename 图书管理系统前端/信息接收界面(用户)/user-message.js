@@ -8,7 +8,6 @@ for (var i = 0; i < arrow.length; i++) {
 
 let sidebar = document.querySelector(".Sidebar");
 let sidebarBtn = document.querySelector(".bx-menu");
-console.log(sidebarBtn);
 sidebarBtn.addEventListener("click", () => {
     sidebar.classList.toggle("close");
 });
@@ -22,15 +21,48 @@ $('.NavLinks2').click(function () {
     $('#content2').removeClass('hide');
 })
 
-axios.defaults.baseURL = 'http://jp-tyo-ntt-1.natfrp.cloud:53497/yunchenbooksmanagementsystem_war'
+axios.defaults.baseURL = 'http://frp-fly.top:53497/yunchen/'
 
 window.addEventListener("load", () => {
     axios({
-        url: '/GetAllBookServlet',
-        method:'GET'
+        url: '/HistoryServlet',
+        method: 'post',
+        data: {
+            "name": "张建亮"
+        }
     }).then((res) => {
-        console.log(res)
+        //console.log(res)
+        res.data.forEach(element => {
+            console.log(element)
+            if (element.status == "已还书") {
+                
+                let message3 = `<div class="Message">
+                <div class="top">
+                    还书申请
+                    <div class="text">
+                        ${element.name}申请还书《${element.bookName}》,数量1,时间2023-3-11
+                    </div>
+                </div>
+                <div class="result1">已同意</div>
+            </div>`
+                $('#content2').append(message3)
+            }
+            if (element.status == "借书中"||element.status == "申请还书") {
+                
+                let message3 = `<div class="Message">
+                <div class="top">
+                    借书申请
+                    <div class="text">
+                    ${element.name}申请借书《${element.bookName}》,数量1,时间2023-3-11
+                    </div>
+                </div>
+                <div class="result1">已同意</div>
+            </div>`
+                $('#content2').append(message3)
+
+            }
+        })
+
     })
 })
-
 

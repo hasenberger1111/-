@@ -36,7 +36,7 @@ $('.NavLinks2').click(function () {
 
 
 
-axios.defaults.baseURL = 'http://jp-tyo-ntt-1.natfrp.cloud:55102/yunchenbooksmanagementsystem_war'
+axios.defaults.baseURL = 'http://frp-fly.top:53497/yunchen'
 
 
 window.addEventListener('load', () => {
@@ -44,7 +44,11 @@ window.addEventListener('load', () => {
         method: 'GET',
         url: '/FindAllStudentServlet'
     }).then((res) => {
+        console.log(res)
         res.data.forEach(element => {
+            let reg = /\D/g;
+            element.userId = element.userId.replace(reg,"");
+            //console.log(element.userId);
             let UserMessage = `<div class="AllUser"><div class="UserAvatar">
             <img src="https://typora--image1.oss-cn-beijing.aliyuncs.com/d54b282a11f4b989840ff36033a4104ef440429c_raw.jpg"
                 alt="" class="UserPhoto">
@@ -66,7 +70,18 @@ window.addEventListener('load', () => {
         method: 'GET',
         url: '/ShowRecordServlet'
     }).then((res) => {
+       // console.log(res)
         res.data.forEach(element => {
+            if (element.status == "申请借阅") {
+                let record = `<tr>
+            <td class="UserName">${element.name}</td>
+            <td class="BookName">${element.bookName}</td>
+            <td class="quantity">${element.number}</td>
+            <td class="BorrowDate"></td>
+            <td class="state">${element.status}</td>
+        </tr>`
+            $('#content2 table').append(record)}
+            else{
             let record = `<tr>
             <td class="UserName">${element.name}</td>
             <td class="BookName">${element.bookName}</td>
@@ -74,9 +89,20 @@ window.addEventListener('load', () => {
             <td class="BorrowDate">${element.borrowTime}</td>
             <td class="state">${element.status}</td>
         </tr>`
-            $('#content2 table').append(record)
+            $('#content2 table').append(record)}
             console.log(element);
         });
 
+    })
+})
+$('.state').delegate('button', 'click',(e)=> {
+    axios({
+        method: 'post',
+        url: '',
+        data: {
+            "name": "",
+            "bookName":"",
+            
+        }
     })
 })
